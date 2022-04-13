@@ -136,20 +136,6 @@ class File(models.Model):
         # url links for doc file and pdf file returned
         return docfile,pdffile
 
-    # storing the result to database
-    def save(self, *args, **kwargs):
-
-        if not self.internal_reference:
-            # generating refernece id
-            random_value = random_value_generator(size=20)
-
-            while File.objects.filter(internal_reference=random_value).exists():
-                random_value = random_value_generator(size=20)
-            hash_value = hashlib.md5(bytes(str(self.id) + str(random_value), 'utf-8'))
-            self.internal_reference = hash_value.hexdigest()
-        # *args and **kwargs having the row properties to be added to table
-        super(File, self).save(*args, **kwargs)
-
     # class for object upload to database
     class Meta:
         verbose_name = "PDFFile"
