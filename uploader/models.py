@@ -1,6 +1,6 @@
 from asyncio.windows_events import NULL
 from django.db import models
-from core import utils
+#from core import utils
 import hashlib
 from PIL import Image
 import pytesseract
@@ -10,6 +10,12 @@ import unicodedata
 from fpdf import FPDF
 # import PyPDF2
 import fitz
+import random 
+import string
+
+
+def random_value_generator(size=10, chars=string.ascii_uppercase+string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
 
 
 class FileManager(models.Manager):
@@ -114,9 +120,12 @@ class File(models.Model):
     def save(self, *args, **kwargs):
 
         if not self.internal_reference:
-            random_value = utils.random_value_generator(size=20)
+            #random_value = utils.random_value_generator(size=20)
+            random_value = random_value_generator(size=20)
+
             while File.objects.filter(internal_reference=random_value).exists():
-                random_value = utils.random_value_generator(size=20)
+                #random_value = utils.random_value_generator(size=20)
+                random_value = random_value_generator(size=20)
             hash_value = hashlib.md5(bytes(str(self.id) + str(random_value), 'utf-8'))
             self.internal_reference = hash_value.hexdigest()
         super(File, self).save(*args, **kwargs)
