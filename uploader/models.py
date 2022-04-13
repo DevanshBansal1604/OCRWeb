@@ -2,7 +2,6 @@
 
 from asyncio.windows_events import NULL
 from django.db import models
-# from core import utils
 import hashlib
 from PIL import Image
 import pytesseract
