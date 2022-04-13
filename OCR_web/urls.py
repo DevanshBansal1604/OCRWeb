@@ -10,4 +10,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # default page of our project, accessible via 'localhost/'
     path('', include("uploader.urls")),
-] #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
