@@ -1,6 +1,6 @@
 from asyncio.windows_events import NULL
 from django.db import models
-from core import utils
+# from core import utils
 import hashlib
 from PIL import Image
 import pytesseract
@@ -110,16 +110,6 @@ class File(models.Model):
 
         return docfile,pdffile
 
-
-    def save(self, *args, **kwargs):
-
-        if not self.internal_reference:
-            random_value = utils.random_value_generator(size=20)
-            while File.objects.filter(internal_reference=random_value).exists():
-                random_value = utils.random_value_generator(size=20)
-            hash_value = hashlib.md5(bytes(str(self.id) + str(random_value), 'utf-8'))
-            self.internal_reference = hash_value.hexdigest()
-        super(File, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name = "PDFFile"
