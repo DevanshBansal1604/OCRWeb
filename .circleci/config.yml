@@ -1,3 +1,5 @@
+# django preinstalled configurations file
+
 version: 2
 jobs:
   build:
