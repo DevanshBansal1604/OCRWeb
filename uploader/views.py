@@ -1,4 +1,4 @@
-# django file for handeling web-requests and responses
+# django file for handling web-requests and responses
 
 from django.shortcuts import render, redirect
 from uploader.forms import FileForm
