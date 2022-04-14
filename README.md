@@ -27,7 +27,7 @@ For this, please follow the below instructions for your SO:
 * [Windows](https://github.com/UB-Mannheim/tesseract/wiki)
 * [Mac and Linux](https://github.com/tesseract-ocr/tesseract/wiki)
 
-If an additional language is required, is necessary to download it from [here](https://github.com/tesseract-ocr/tessdata) and move it to $TESSERACT_PATH/tessdata/
+If an additional language is required, it is necessary to download it from [here](https://github.com/tesseract-ocr/tessdata) and move it to $TESSERACT_PATH/tessdata/
 
 ## How to use
 1. After you run the above mentioned commands (till python manage.py runserver), go to the local host.
