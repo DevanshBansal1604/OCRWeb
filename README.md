@@ -43,7 +43,7 @@ If an additional language is required, it is necessary to download it from [here
 1. After you run the above mentioned commands (till python manage.py runserver), go to the local host.
 2. There will be a file upload section in the centre of the screen. You can upload the file by clicking on the 'Browse' button, or by clicking anywhere on the input-file bar.
 3. Once you click as mentioned, it will open a dialog box to select the file to be uploaded, from your local machine.
-4. Select the file (acceptable file extensions are: .jpeg,.jpg,.png,.pdf; if uploaded file is of other extension, then it will show an alert), and click on'Submit'.
+4. Select the file (acceptable file extensions are: .jpeg,.jpg,.png,.pdf; if uploaded file is of other extension, then it will show an alert), and click on 'Submit'.
 5. You will be presented with 2 links (one for .docx output file, and other for .pdf output file) to download the output file.
 6. The website is ready to use again, just after an output is given to user in form of those links.
 
