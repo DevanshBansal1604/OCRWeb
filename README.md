@@ -16,7 +16,7 @@ Firstly setup a Virtual Environment by following the below steps:
 7. Then download the zip file of the code, and extract the zip inside this folder (<folder_name>, here 'venv_folder').
 
 
-Then run the below command:
+Then run the below commands:
 
 ```
 pip install -r requirements.txt
