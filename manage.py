@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+# Django admin file that is used to interact with the project file (project_file.settings)
+
 import os
 import sys
 
