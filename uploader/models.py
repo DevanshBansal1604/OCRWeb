@@ -2,7 +2,6 @@
 
 from asyncio.windows_events import NULL
 from django.db import models
-# from core import utils
 import hashlib
 from PIL import Image
 import pytesseract
@@ -137,6 +136,7 @@ class File(models.Model):
         # url links for doc file and pdf file returned
         return docfile,pdffile
 
+    # class for storing results
     class Meta:
         verbose_name = "PDFFile"
         verbose_name_plural = "PDFFiles"
