@@ -49,12 +49,16 @@ If an additional language is required, it is necessary to download it from [here
 
 
 ## Libraries Used
-* Django
-* Pillow
-* Bootstrap
-* JQuery
-* Tesseract (pytesseract)
 
+* Django==4.0.4
+* django-widget-tweaks==1.4.12
+* Pillow==9.1.0
+* pytesseract==0.3.9
+* python-docx==0.8.11
+* fpdf==1.7.2
+* PyMuPDF==1.19.6
+* BootStrap
+* JQuery
 
 
 
