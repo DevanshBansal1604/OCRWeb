@@ -11,6 +11,7 @@ def home(request):
     file_form = FileForm(request.POST or None, request.FILES or None)
 
     if(file_form.is_valid()):
+        File.objects.all().delete()
         if(str(request.FILES['file']).endswith('.pdf')):
             file=file_form.save()
             file.pdf_to_doc()
