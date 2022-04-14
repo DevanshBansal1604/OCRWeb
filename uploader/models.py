@@ -17,7 +17,7 @@ import string
 def random_value_generator(size=10, chars=string.ascii_uppercase+string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 
-# interacting class with the database, to perform search function to return the retrived information
+# interacting class with the database, to perform search function to return the retrieved information
 class FileManager(models.Manager):
 
     def search(self, query):
@@ -96,17 +96,17 @@ class File(models.Model):
 
         return pdf
 
-    # for handeling use case of pdf upload
+    # for handling use case of pdf upload
     def pdf_to_doc(self):
         mydoc = docx.Document() # document type
 
-        # iterating the pdf's images, page wise
+        # iterating the pdf, page wise
         with fitz.open('media/'+str(self.file)) as doc:
             txt=""
             for page in doc:
                 txt+=page.get_text()
         
-        # handeling the null characters of text read     
+        # handling the null characters of text read     
         s=''
         for i in txt:
             if(32<=ord(i)<=126 or ord(i)==10):
@@ -127,13 +127,13 @@ class File(models.Model):
         return mydoc
 
 
-    # for handeling use case of image upload
+    # for handling use case of image upload
     def execute_img_and_save_ocr(self):
         
         txtfile=self.text_extraction(self.file)
         docfile=self.txt_to_doc()
         pdffile=self.txt_to_pdf()
-        # url links for doc file and pdf file returned
+        # doc file and pdf file returned
         return docfile,pdffile
 
     # class for storing results
