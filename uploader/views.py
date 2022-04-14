@@ -14,6 +14,7 @@ def home(request):
 
     # checking constraints
     if(file_form.is_valid()):
+        #Deleting previous uploaded files
         File.objects.all().delete()
         # choosing the processing method based on use case
         if(str(request.FILES['file']).endswith('.pdf')):
