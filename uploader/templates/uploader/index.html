@@ -40,6 +40,8 @@ function show_img_details(img_path){
     <h1>OCR web</h1>
 </div>
 
+<!-- Shows the message (alert) if any! -->
+
 {% if messages %}
 {% for message in messages %}
 <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
@@ -58,6 +60,7 @@ function show_img_details(img_path){
 {% endfor %}
 {% endif %}
 
+<!-- Form is created in backend to take the file as input!-->
 
 <div class="offset-md-2 col-md-8 my-5" id="file_form">
     <form action="#file_form" method="POST" enctype="multipart/form-data">
@@ -74,6 +77,8 @@ function show_img_details(img_path){
         </fieldset>
     </form>
 </div>
+
+<!-- Table is created to show the input file name, output files' links and the preview! -->
 
 <div>
     <table class="table table-striped">
