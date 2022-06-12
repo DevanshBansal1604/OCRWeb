@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/fabinhojorge/OCR_web.svg?style=svg)](https://circleci.com/gh/fabinhojorge/OCR_web)
-
 # OCR web (Software Engineering Course Project)
 This project is an OCR (Optical Character Recognition) web interface for images/PDFs. 
 The idea of this project is to study technologies like Python, Django, Tesseract(OCR), Continuous Integration, etc...
